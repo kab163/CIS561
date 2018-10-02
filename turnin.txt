@@ -1,0 +1,6 @@
+[DEFAULT]
+name =  Kristi Belcher
+host =  ix-dev.cs.uoregon.edu
+path = /home/users/kab163/CIS561/
+program = scanner
+repo = https://github.com/kab163/CIS561
