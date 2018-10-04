@@ -1,7 +1,7 @@
 [DEFAULT]
 name =  Kristi Belcher
 host =  ix-dev.cs.uoregon.edu
-path = /home/users/kab163/CIS561/HW1/
+path = /home/users/kab163/CIS561/CIS561/HW1
 program = scanner
 repo = https://github.com/kab163/CIS561.git
 repo_folder = HW1
