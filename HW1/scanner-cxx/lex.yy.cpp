@@ -144,7 +144,7 @@ std::string BAD_NL_STR =
 
 int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
 {
-  static const reflex::Pattern PATTERN_INITIAL("(?m)(==)|([<]=)|([>]=)|([<])|([>])|([\\x2d])|([\\x2b])|([\\x2a])|([/])|([\\x28])|([\\x29])|([\\x7b])|([\\x7d])|([,])|([;])|([\\x2e])|([:])|([=])|(class)|(def)|(extends)|(if)|(elif)|(else)|(while)|(return)|(typecase)|(and)|(or)|(not)|([0-9]+)|([A-Z_a-z]*)|([0-9A-Z_a-z]*)|([\\x09\\x0a\\x0d\\x20]*)|([/][\\x2a])|(.)");
+  static const reflex::Pattern PATTERN_INITIAL("(?m)(==)|([<]=)|([>]=)|([<])|([>])|([\\x2d])|([\\x2b])|([\\x2a])|([/])|([\\x28])|([\\x29])|([\\x7b])|([\\x7d])|([,])|([;])|([\\x2e])|([:])|([=])|(class)|(def)|(extends)|(if)|(elif)|(else)|(while)|(return)|(typecase)|(and)|(or)|(not)|([0-9]+)|([A-Z_a-z]*)|([0-9A-Z_a-z]*)|([\"(-*\\x2e\\x3f])|([\\x09\\x0a\\x0d\\x20]*)|([/][\\x2a])|(.)");
   static const reflex::Pattern PATTERN_comment("(?m)([^\\x2a]*)|([\\x2a][^/])|([\\x2a][/])");
   if (!has_matcher())
   {
@@ -345,7 +345,10 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
           case 33: // rule at line 125: [0-9A-Z_a-z]*
 #line 125 "quack.lxx"
 { return parser::token::STRING_LIT; }
-
+            break;
+          case 34: // rule at line 126: ["(-*\x2e\x3f]
+#line 126 "quack.lxx"
+{ return parser::token::STRING_LIT; }
   /* You *can* write a one-line regular expression for matching a quoted string,
    * but you probably can't read it.  (I can't read mine.)  Scanner states and
    * simpler patterns are probably a better idea.
@@ -356,17 +359,17 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
 
   /* Ignore whitespace */
             break;
-          case 34: // rule at line 136: [\x09\x0a\x0d\x20]*
+          case 35: // rule at line 136: [\x09\x0a\x0d\x20]*
 #line 136 "quack.lxx"
 { ; }
 
    /* Multi-line comments */
             break;
-          case 35: // rule at line 139: [/][\x2a]
+          case 36: // rule at line 139: [/][\x2a]
 #line 139 "quack.lxx"
 { start(comment); }
             break;
-          case 36: // rule at line 144: .
+          case 37: // rule at line 144: .
 #line 144 "quack.lxx"
 {   report::error("Unexpected character '" + std::string(text()) + "'" +
        " at line " + std::to_string(lineno()) +

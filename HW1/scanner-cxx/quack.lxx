@@ -123,7 +123,7 @@ not    { return parser::token::NOT;     }
 [0-9]+                   { yylval.num = atoi(text()); return parser::token::INT_LIT; }
 [a-zA-Z_]*               { return parser::token::STRING_LIT; }
 [a-zA-Z0-9_]*	         { return parser::token::STRING_LIT; }
-  
+["(.*?)"]                { return parser::token::STRING_LIT; }
   /* You *can* write a one-line regular expression for matching a quoted string,
    * but you probably can't read it.  (I can't read mine.)  Scanner states and
    * simpler patterns are probably a better idea.
