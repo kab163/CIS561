@@ -14,3 +14,5 @@ make
 This produces a list of tokens that will be used later on with a parser.
 
 Current TODO: complete the robustness of the scanner. Add error handling. Test with more files.
+
+Note: tested on all .qk files except those starting with "bad_" - that is where the TODO task is geared toward at this point. 
