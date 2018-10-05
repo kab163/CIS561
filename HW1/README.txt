@@ -10,9 +10,11 @@ To run:
 
 make
 ./lexer samples/hands.qk
+./lexer samples/bad_escape.qk
+(can run other programs too)
 
 This produces a list of tokens that will be used later on with a parser.
 
 Current TODO: complete the robustness of the scanner. Add error handling. Test with more files.
 
-Update: Just need to figure out how to handle '\' in a string. 
+Update: Added in some error handling. I think I am still outputting too many tokens (doesn't realize and entire word is 1 token rather than each letter being a token). 

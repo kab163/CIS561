@@ -49,7 +49,9 @@ std::string BAD_NL_STR =
    * how to declare an exclusive scanner state. 
    */ 
 %x comment
-
+%x quote
+%x sinquote
+%x triquote
 %%
 
   /* We start with some tokens that are not value-bearing,
@@ -70,19 +72,21 @@ std::string BAD_NL_STR =
     * JFlex/Cup do not let you do this in Java.
     * Here are a few ... there are more. 
     */
+
+[/][/].*[\n] { ; }
 [-]     { return parser::token::MINUS; }
 [+]     { return parser::token::PLUS;  }
 [*]     { return parser::token::TIMES; }
 [/]     { return parser::token::DIVIDE;}
-[(]     { return parser::token::DIVIDE;}
-[)]     { return parser::token::DIVIDE;}
-[{]     { return parser::token::DIVIDE;}
-[}]     { return parser::token::DIVIDE;}
-[,]     { return parser::token::DIVIDE;}
-[;]     { return parser::token::DIVIDE;}
-[.]     { return parser::token::DIVIDE;}
-[:]     { return parser::token::DIVIDE;}
-[=]     { return parser::token::DIVIDE;}
+[(]          { ; }
+[)]          { ; }    
+[{]          { ; }
+[}]          { ; }
+[,]          { ; }
+[;]          { ; }
+[.]          { ; }
+[:]          { ; }
+[=]          { ; }
 
   /* Keywords are essentially another kind of punctuation,
    * but since they also match the identifier pattern, we
@@ -119,12 +123,15 @@ not    { return parser::token::NOT;     }
     * 'strdup' the value returned by 'text()', or else it will
     * be clobbered by subsequent calls. 
     */
+/*["(.*?\1)"]                { return parser::token::STRING_LIT; }
+['(.*?\1)']                { return parser::token::STRING_LIT; }
+*/
 
-[0-9]+                   { yylval.num = atoi(text()); return parser::token::INT_LIT; }
-[a-zA-Z_]*               { return parser::token::STRING_LIT; }
-[a-zA-Z0-9_]*	         { return parser::token::STRING_LIT; }
-["(.*?)"]                { return parser::token::STRING_LIT; }
-['(.*?)']                { return parser::token::STRING_LIT; }
+[0-9]+                   { yylval.num = atoi(text());      return parser::token::INT_LIT; }
+[a-zA-Z_]*               { yylval.str = strdup(text()); return parser::token::IDENT; }
+[a-zA-Z0-9_]*	         { yylval.str = strdup(text()); return parser::token::IDENT; }
+[\\]+ 		 { report::error(BAD_ESC_MSG); }
+
   /* You *can* write a one-line regular expression for matching a quoted string,
    * but you probably can't read it.  (I can't read mine.)  Scanner states and
    * simpler patterns are probably a better idea.
@@ -141,6 +148,20 @@ not    { return parser::token::NOT;     }
 <comment>[^*]*   { ; }
 <comment>[*][^/] { ; }
 <comment>[*][/]  { start(INITIAL); }
+
+/*["""]            {start(triquote); string_buf = ""; }
+<triquote>[^\"""\\]+ {string_buf += std::string(text());         }
+<triquote>["""]  {yylval.str = strdup(string_buf.c_str()); start(INITIAL); }
+*/
+["]		 {start(quote); string_buf = "";  	   }
+<quote>[^\"\\]+  {string_buf += std::string(text());		 	   }
+<quote>[\n]	 {report::error(BAD_NL_STR); }
+<quote>[\\]	 {report::error(BAD_ESC_MSG); }
+<quote>["]	 {yylval.str = strdup(string_buf.c_str()); start(INITIAL); }
+
+[']		 {start(sinquote); string_buf = ""; }
+<sinquote>[^\'\\]+ {string_buf += std::string(text());           }
+<sinquote>[']    {yylval.str = strdup(string_buf.c_str()); start(INITIAL); }
 
 .  {   report::error("Unexpected character '" + std::string(text()) + "'" +
        " at line " + std::to_string(lineno()) +

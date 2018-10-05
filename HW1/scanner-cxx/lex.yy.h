@@ -78,6 +78,9 @@ class Lexer : public reflex::AbstractLexer<reflex::Matcher> {
   }
   static const int INITIAL = 0;
   static const int comment = 1;
+  static const int quote = 2;
+  static const int sinquote = 3;
+  static const int triquote = 4;
   virtual int yylex(yy::parser::semantic_type *yylval, yy::location *yylloc)
   {
     yylloc->step();
