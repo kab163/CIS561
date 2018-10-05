@@ -147,7 +147,7 @@ std::string BAD_NL_STR =
 
 int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
 {
-  static const reflex::Pattern PATTERN_INITIAL("(?m)(==)|([<]=)|([>]=)|([<])|([>])|([/][/].*[\\x0a])|([\\x2d])|([\\x2b])|([\\x2a])|([/])|([\\x28])|([\\x29])|([\\x7b])|([\\x7d])|([,])|([;])|([\\x2e])|([:])|([=])|(class)|(def)|(extends)|(if)|(elif)|(else)|(while)|(return)|(typecase)|(and)|(or)|(not)|([0-9]+)|([A-Z_a-z]*)|([0-9A-Z_a-z]*)|([\\x5c]+)|([\\x09\\x0a\\x0d\\x20]*)|([/][\\x2a])|([\"])|(['])|(.)");
+  static const reflex::Pattern PATTERN_INITIAL("(?m)(==)|([<]=)|([>]=)|([<])|([>])|([/][/].*[\\x0a])|([\\x2d])|([\\x2b])|([\\x2a])|([/])|([\\x28])|([\\x29])|([\\x7b])|([\\x7d])|([,])|([;])|([\\x2e])|([:])|([=])|(class)|(def)|(extends)|(if)|(elif)|(else)|(while)|(return)|(typecase)|(and)|(or)|(not)|([0-9]+)|([A-Z_a-z][0-9A-Z_a-z]*)|([\\x09\\x0a\\x0d\\x20]*)|([/][\\x2a])|([\"])|(['])|(.)");
   static const reflex::Pattern PATTERN_comment("(?m)([^\\x2a]*)|([\\x2a][^/])|([\\x2a][/])");
   static const reflex::Pattern PATTERN_quote("(?m)([^\"\\x5c]+)|([\\x0a])|([\\x5c])|([\"])");
   static const reflex::Pattern PATTERN_sinquote("(?m)([^'\\x5c]+)|(['])");
@@ -178,7 +178,7 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
           case 0:
             if (matcher().at_end())
             {
-#line 171 "quack.lxx"
+#line 172 "quack.lxx"
 { return EOF; }
 
             }
@@ -348,48 +348,31 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
 #line 130 "quack.lxx"
 { yylval.num = atoi(text());      return parser::token::INT_LIT; }
             break;
-          case 33: // rule at line 131: [A-Z_a-z]*
+          case 33: // rule at line 131: [A-Z_a-z][0-9A-Z_a-z]*
 #line 131 "quack.lxx"
 { yylval.str = strdup(text()); return parser::token::IDENT; }
-            break;
-          case 34: // rule at line 132: [0-9A-Z_a-z]*
-#line 132 "quack.lxx"
-{ yylval.str = strdup(text()); return parser::token::IDENT; }
-            break;
-          case 35: // rule at line 133: [\x5c]+
-#line 133 "quack.lxx"
-{ report::error(BAD_ESC_MSG); }
 
-  /* You *can* write a one-line regular expression for matching a quoted string,
-   * but you probably can't read it.  (I can't read mine.)  Scanner states and
-   * simpler patterns are probably a better idea.
-   * You almost certainly scanner states for triple quotes.
-   * The tricky bit is catching errors, such as disallowed escape sequences
-   * and unclosed quotes.
-   */
-
-  /* Ignore whitespace */
             break;
-          case 36: // rule at line 144: [\x09\x0a\x0d\x20]*
-#line 144 "quack.lxx"
+          case 34: // rule at line 145: [\x09\x0a\x0d\x20]*
+#line 145 "quack.lxx"
 { ; }
 
    /* Multi-line comments */
             break;
-          case 37: // rule at line 147: [/][\x2a]
-#line 147 "quack.lxx"
+          case 35: // rule at line 148: [/][\x2a]
+#line 148 "quack.lxx"
 { start(comment); }
             break;
-          case 38: // rule at line 156: ["]
-#line 156 "quack.lxx"
+          case 36: // rule at line 157: ["]
+#line 157 "quack.lxx"
 {start(quote); string_buf = "";  	   }
             break;
-          case 39: // rule at line 162: [']
-#line 162 "quack.lxx"
+          case 37: // rule at line 163: [']
+#line 163 "quack.lxx"
 {start(sinquote); string_buf = ""; }
             break;
-          case 40: // rule at line 166: .
-#line 166 "quack.lxx"
+          case 38: // rule at line 167: .
+#line 167 "quack.lxx"
 {   report::error("Unexpected character '" + std::string(text()) + "'" +
        " at line " + std::to_string(lineno()) +
        ", column " + std::to_string(columno()));
@@ -405,7 +388,7 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
           case 0:
             if (matcher().at_end())
             {
-#line 171 "quack.lxx"
+#line 172 "quack.lxx"
 { return EOF; }
 
             }
@@ -414,16 +397,16 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
               out().put(matcher().input());
             }
             break;
-          case 1: // rule at line 148: [^\x2a]*
-#line 148 "quack.lxx"
-{ ; }
-            break;
-          case 2: // rule at line 149: [\x2a][^/]
+          case 1: // rule at line 149: [^\x2a]*
 #line 149 "quack.lxx"
 { ; }
             break;
-          case 3: // rule at line 150: [\x2a][/]
+          case 2: // rule at line 150: [\x2a][^/]
 #line 150 "quack.lxx"
+{ ; }
+            break;
+          case 3: // rule at line 151: [\x2a][/]
+#line 151 "quack.lxx"
 { start(INITIAL); }
 
             break;
@@ -436,7 +419,7 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
           case 0:
             if (matcher().at_end())
             {
-#line 171 "quack.lxx"
+#line 172 "quack.lxx"
 { return EOF; }
 
             }
@@ -445,20 +428,20 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
               out().put(matcher().input());
             }
             break;
-          case 1: // rule at line 157: [^"\x5c]+
-#line 157 "quack.lxx"
+          case 1: // rule at line 158: [^"\x5c]+
+#line 158 "quack.lxx"
 {string_buf += std::string(text());		 	   }
             break;
-          case 2: // rule at line 158: [\x0a]
-#line 158 "quack.lxx"
+          case 2: // rule at line 159: [\x0a]
+#line 159 "quack.lxx"
 {report::error(BAD_NL_STR); }
             break;
-          case 3: // rule at line 159: [\x5c]
-#line 159 "quack.lxx"
+          case 3: // rule at line 160: [\x5c]
+#line 160 "quack.lxx"
 {report::error(BAD_ESC_MSG); }
             break;
-          case 4: // rule at line 160: ["]
-#line 160 "quack.lxx"
+          case 4: // rule at line 161: ["]
+#line 161 "quack.lxx"
 {yylval.str = strdup(string_buf.c_str()); start(INITIAL); }
 
             break;
@@ -471,7 +454,7 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
           case 0:
             if (matcher().at_end())
             {
-#line 171 "quack.lxx"
+#line 172 "quack.lxx"
 { return EOF; }
 
             }
@@ -480,12 +463,12 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
               out().put(matcher().input());
             }
             break;
-          case 1: // rule at line 163: [^'\x5c]+
-#line 163 "quack.lxx"
+          case 1: // rule at line 164: [^'\x5c]+
+#line 164 "quack.lxx"
 {string_buf += std::string(text());           }
             break;
-          case 2: // rule at line 164: [']
-#line 164 "quack.lxx"
+          case 2: // rule at line 165: [']
+#line 165 "quack.lxx"
 {yylval.str = strdup(string_buf.c_str()); start(INITIAL); }
 
             break;
@@ -498,7 +481,7 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
           case 0:
             if (matcher().at_end())
             {
-#line 171 "quack.lxx"
+#line 172 "quack.lxx"
 { return EOF; }
 
             }
@@ -521,7 +504,7 @@ int yy::Lexer::yylex(yy::parser::semantic_type& yylval)
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 
-#line 174 "quack.lxx"
+#line 175 "quack.lxx"
 
 /* No main program here */
 

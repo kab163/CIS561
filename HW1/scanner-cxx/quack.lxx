@@ -123,14 +123,9 @@ not    { return parser::token::NOT;     }
     * 'strdup' the value returned by 'text()', or else it will
     * be clobbered by subsequent calls. 
     */
-/*["(.*?\1)"]                { return parser::token::STRING_LIT; }
-['(.*?\1)']                { return parser::token::STRING_LIT; }
-*/
 
 [0-9]+                   { yylval.num = atoi(text());      return parser::token::INT_LIT; }
-[a-zA-Z_]*               { yylval.str = strdup(text()); return parser::token::IDENT; }
-[a-zA-Z0-9_]*	         { yylval.str = strdup(text()); return parser::token::IDENT; }
-[\\]+ 		 { report::error(BAD_ESC_MSG); }
+[_a-zA-Z][_a-zA-Z0-9]*  { yylval.str = strdup(text()); return parser::token::IDENT; }
 
   /* You *can* write a one-line regular expression for matching a quoted string,
    * but you probably can't read it.  (I can't read mine.)  Scanner states and
