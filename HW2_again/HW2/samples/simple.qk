@@ -1,0 +1,5 @@
+class Simple() {
+	/*Nothing*/
+}
+
+x:Int = 42;

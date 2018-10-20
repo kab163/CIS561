@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+e90de1247f20404b5c3a05940b843a05 lex.yy.cpp
+76552a57ea65403e89ff4d58fddf06a9 quack.tab.cxx

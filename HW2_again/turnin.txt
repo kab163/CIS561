@@ -1,0 +1,7 @@
+[DEFAULT]
+name =  Kristi Belcher
+host =  ix-dev.cs.uoregon.edu
+path = /home/users/kab163/CIS561/CIS561/HW2/HW2
+program = parser
+repo = https://github.com/kab163/CIS561.git
+repo_folder = HW2/HW2
