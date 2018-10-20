@@ -81,15 +81,18 @@ stmt: %empty { }
      | ifstmt { }
      | while_stmt { }
      | meth_stmt { }
-     | RETURN ';' { }
-     | RETURN R_Expr stmt { }
-     | RETURN L_Expr ';' { }
+     | return { }
      | typeC { }
      | L_Expr ':' IDENT ',' { }
      | L_Expr ':' IDENT { }     
      | L_Expr ':' IDENT '=' R_Expr stmt { } 
      | L_Expr '=' R_Expr stmt { }
      | R_Expr { }
+     ;
+
+return: RETURN ';' { }
+     | RETURN R_Expr stmt { }
+     | RETURN L_Expr ';' { }
      ;
 
 ifstmt: IF R_Expr '{' stmts '}' ELIF R_Expr '{' stmts '}' ELSE '{' stmts '}' { }
