@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kab163/CIS561/HW2_redo/HW2
+CMAKE_SOURCE_DIR = /Users/kab163/CIS561/HW2_again/HW2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kab163/CIS561/HW2_redo/HW2
+CMAKE_BINARY_DIR = /Users/kab163/CIS561/HW2_again/HW2
 
 # Include any dependencies generated for this target.
 include CMakeFiles/parser.dir/depend.make
@@ -58,8 +58,8 @@ include CMakeFiles/parser.dir/progress.make
 include CMakeFiles/parser.dir/flags.make
 
 quack.tab.cxx: quack.yxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating quack.tab.cxx, quack.tab.hxx, location.hh, position.hh, stack.hh"
-	bison -d /Users/kab163/CIS561/HW2_redo/HW2/quack.yxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating quack.tab.cxx, quack.tab.hxx, location.hh, position.hh, stack.hh"
+	bison -d /Users/kab163/CIS561/HW2_again/HW2/quack.yxx
 
 quack.tab.hxx: quack.tab.cxx
 	@$(CMAKE_COMMAND) -E touch_nocreate quack.tab.hxx
@@ -75,76 +75,76 @@ stack.hh: quack.tab.cxx
 
 lex.yy.cpp: quack.lxx
 lex.yy.cpp: quack.tab.hxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating lex.yy.cpp, lex.yy.h"
-	reflex --bison-cc --bison-locations --header-file /Users/kab163/CIS561/HW2_redo/HW2/quack.lxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating lex.yy.cpp, lex.yy.h"
+	reflex --bison-cc --bison-locations --header-file /Users/kab163/CIS561/HW2_again/HW2/quack.lxx
 
 lex.yy.h: lex.yy.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate lex.yy.h
 
 CMakeFiles/parser.dir/quack.tab.cxx.o: CMakeFiles/parser.dir/flags.make
 CMakeFiles/parser.dir/quack.tab.cxx.o: quack.tab.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/parser.dir/quack.tab.cxx.o"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/quack.tab.cxx.o -c /Users/kab163/CIS561/HW2_redo/HW2/quack.tab.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/parser.dir/quack.tab.cxx.o"
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/quack.tab.cxx.o -c /Users/kab163/CIS561/HW2_again/HW2/quack.tab.cxx
 
 CMakeFiles/parser.dir/quack.tab.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/quack.tab.cxx.i"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_redo/HW2/quack.tab.cxx > CMakeFiles/parser.dir/quack.tab.cxx.i
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_again/HW2/quack.tab.cxx > CMakeFiles/parser.dir/quack.tab.cxx.i
 
 CMakeFiles/parser.dir/quack.tab.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/quack.tab.cxx.s"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_redo/HW2/quack.tab.cxx -o CMakeFiles/parser.dir/quack.tab.cxx.s
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_again/HW2/quack.tab.cxx -o CMakeFiles/parser.dir/quack.tab.cxx.s
 
 CMakeFiles/parser.dir/lex.yy.cpp.o: CMakeFiles/parser.dir/flags.make
 CMakeFiles/parser.dir/lex.yy.cpp.o: lex.yy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/parser.dir/lex.yy.cpp.o"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/lex.yy.cpp.o -c /Users/kab163/CIS561/HW2_redo/HW2/lex.yy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/parser.dir/lex.yy.cpp.o"
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/lex.yy.cpp.o -c /Users/kab163/CIS561/HW2_again/HW2/lex.yy.cpp
 
 CMakeFiles/parser.dir/lex.yy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/lex.yy.cpp.i"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_redo/HW2/lex.yy.cpp > CMakeFiles/parser.dir/lex.yy.cpp.i
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_again/HW2/lex.yy.cpp > CMakeFiles/parser.dir/lex.yy.cpp.i
 
 CMakeFiles/parser.dir/lex.yy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/lex.yy.cpp.s"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_redo/HW2/lex.yy.cpp -o CMakeFiles/parser.dir/lex.yy.cpp.s
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_again/HW2/lex.yy.cpp -o CMakeFiles/parser.dir/lex.yy.cpp.s
 
 CMakeFiles/parser.dir/parser.cpp.o: CMakeFiles/parser.dir/flags.make
 CMakeFiles/parser.dir/parser.cpp.o: parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/parser.dir/parser.cpp.o"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/parser.cpp.o -c /Users/kab163/CIS561/HW2_redo/HW2/parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/parser.dir/parser.cpp.o"
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/parser.cpp.o -c /Users/kab163/CIS561/HW2_again/HW2/parser.cpp
 
 CMakeFiles/parser.dir/parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/parser.cpp.i"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_redo/HW2/parser.cpp > CMakeFiles/parser.dir/parser.cpp.i
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_again/HW2/parser.cpp > CMakeFiles/parser.dir/parser.cpp.i
 
 CMakeFiles/parser.dir/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/parser.cpp.s"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_redo/HW2/parser.cpp -o CMakeFiles/parser.dir/parser.cpp.s
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_again/HW2/parser.cpp -o CMakeFiles/parser.dir/parser.cpp.s
 
 CMakeFiles/parser.dir/ASTNode.cpp.o: CMakeFiles/parser.dir/flags.make
 CMakeFiles/parser.dir/ASTNode.cpp.o: ASTNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/parser.dir/ASTNode.cpp.o"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/ASTNode.cpp.o -c /Users/kab163/CIS561/HW2_redo/HW2/ASTNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/parser.dir/ASTNode.cpp.o"
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/ASTNode.cpp.o -c /Users/kab163/CIS561/HW2_again/HW2/ASTNode.cpp
 
 CMakeFiles/parser.dir/ASTNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/ASTNode.cpp.i"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_redo/HW2/ASTNode.cpp > CMakeFiles/parser.dir/ASTNode.cpp.i
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_again/HW2/ASTNode.cpp > CMakeFiles/parser.dir/ASTNode.cpp.i
 
 CMakeFiles/parser.dir/ASTNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/ASTNode.cpp.s"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_redo/HW2/ASTNode.cpp -o CMakeFiles/parser.dir/ASTNode.cpp.s
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_again/HW2/ASTNode.cpp -o CMakeFiles/parser.dir/ASTNode.cpp.s
 
 CMakeFiles/parser.dir/Messages.cpp.o: CMakeFiles/parser.dir/flags.make
 CMakeFiles/parser.dir/Messages.cpp.o: Messages.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/parser.dir/Messages.cpp.o"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/Messages.cpp.o -c /Users/kab163/CIS561/HW2_redo/HW2/Messages.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/parser.dir/Messages.cpp.o"
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/Messages.cpp.o -c /Users/kab163/CIS561/HW2_again/HW2/Messages.cpp
 
 CMakeFiles/parser.dir/Messages.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/Messages.cpp.i"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_redo/HW2/Messages.cpp > CMakeFiles/parser.dir/Messages.cpp.i
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kab163/CIS561/HW2_again/HW2/Messages.cpp > CMakeFiles/parser.dir/Messages.cpp.i
 
 CMakeFiles/parser.dir/Messages.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/Messages.cpp.s"
-	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_redo/HW2/Messages.cpp -o CMakeFiles/parser.dir/Messages.cpp.s
+	/Users/kab163/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kab163/CIS561/HW2_again/HW2/Messages.cpp -o CMakeFiles/parser.dir/Messages.cpp.s
 
 # Object files for target parser
 parser_OBJECTS = \
@@ -165,7 +165,7 @@ parser: CMakeFiles/parser.dir/Messages.cpp.o
 parser: CMakeFiles/parser.dir/build.make
 parser: /usr/local/lib/libreflex.a
 parser: CMakeFiles/parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -184,6 +184,6 @@ CMakeFiles/parser.dir/depend: position.hh
 CMakeFiles/parser.dir/depend: stack.hh
 CMakeFiles/parser.dir/depend: lex.yy.cpp
 CMakeFiles/parser.dir/depend: lex.yy.h
-	cd /Users/kab163/CIS561/HW2_redo/HW2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kab163/CIS561/HW2_redo/HW2 /Users/kab163/CIS561/HW2_redo/HW2 /Users/kab163/CIS561/HW2_redo/HW2 /Users/kab163/CIS561/HW2_redo/HW2 /Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles/parser.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kab163/CIS561/HW2_again/HW2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kab163/CIS561/HW2_again/HW2 /Users/kab163/CIS561/HW2_again/HW2 /Users/kab163/CIS561/HW2_again/HW2 /Users/kab163/CIS561/HW2_again/HW2 /Users/kab163/CIS561/HW2_again/HW2/CMakeFiles/parser.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/parser.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/kab163/CIS561/HW2_redo/HW2 -I/usr/local/include/reflex 
+CXX_INCLUDES = -I/Users/kab163/CIS561/HW2_again/HW2 -I/usr/local/include/reflex 
 

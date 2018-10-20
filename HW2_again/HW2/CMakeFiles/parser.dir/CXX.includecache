@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/kab163/CIS561/HW2_redo/HW2/ASTNode.cpp
-ASTNode.h
-/Users/kab163/CIS561/HW2_redo/HW2/ASTNode.h
-
-/Users/kab163/CIS561/HW2_redo/HW2/ASTNode.h
+/Users/kab163/CIS561/HW2_again/HW2/ASTNode.h
 string
 -
 sstream
@@ -18,55 +14,55 @@ sstream
 vector
 -
 
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.cpp
+/Users/kab163/CIS561/HW2_again/HW2/Messages.cpp
 Messages.h
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.h
+/Users/kab163/CIS561/HW2_again/HW2/Messages.h
 location.hh
-/Users/kab163/CIS561/HW2_redo/HW2/location.hh
+/Users/kab163/CIS561/HW2_again/HW2/location.hh
 
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.h
+/Users/kab163/CIS561/HW2_again/HW2/Messages.h
 location.hh
-/Users/kab163/CIS561/HW2_redo/HW2/location.hh
+/Users/kab163/CIS561/HW2_again/HW2/location.hh
 string
 -
 
-/Users/kab163/CIS561/HW2_redo/HW2/lex.yy.cpp
+/Users/kab163/CIS561/HW2_again/HW2/lex.yy.cpp
 quack.tab.hxx
-/Users/kab163/CIS561/HW2_redo/HW2/quack.tab.hxx
+/Users/kab163/CIS561/HW2_again/HW2/quack.tab.hxx
 Messages.h
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.h
+/Users/kab163/CIS561/HW2_again/HW2/Messages.h
 reflex/matcher.h
 -
 reflex/abslexer.h
 -
 
-/Users/kab163/CIS561/HW2_redo/HW2/lex.yy.h
+/Users/kab163/CIS561/HW2_again/HW2/lex.yy.h
 quack.tab.hxx
-/Users/kab163/CIS561/HW2_redo/HW2/quack.tab.hxx
+/Users/kab163/CIS561/HW2_again/HW2/quack.tab.hxx
 Messages.h
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.h
+/Users/kab163/CIS561/HW2_again/HW2/Messages.h
 reflex/matcher.h
 -
 reflex/abslexer.h
 -
 
-/Users/kab163/CIS561/HW2_redo/HW2/location.hh
+/Users/kab163/CIS561/HW2_again/HW2/location.hh
 position.hh
-/Users/kab163/CIS561/HW2_redo/HW2/position.hh
+/Users/kab163/CIS561/HW2_again/HW2/position.hh
 
-/Users/kab163/CIS561/HW2_redo/HW2/parser.cpp
+/Users/kab163/CIS561/HW2_again/HW2/parser.cpp
 lex.yy.h
-/Users/kab163/CIS561/HW2_redo/HW2/lex.yy.h
+/Users/kab163/CIS561/HW2_again/HW2/lex.yy.h
 ASTNode.h
-/Users/kab163/CIS561/HW2_redo/HW2/ASTNode.h
+/Users/kab163/CIS561/HW2_again/HW2/ASTNode.h
 Messages.h
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.h
+/Users/kab163/CIS561/HW2_again/HW2/Messages.h
 iostream
 -
 unistd.h
 -
 
-/Users/kab163/CIS561/HW2_redo/HW2/position.hh
+/Users/kab163/CIS561/HW2_again/HW2/position.hh
 algorithm
 -
 iostream
@@ -74,19 +70,19 @@ iostream
 string
 -
 
-/Users/kab163/CIS561/HW2_redo/HW2/quack.tab.cxx
+/Users/kab163/CIS561/HW2_again/HW2/quack.tab.cxx
 quack.tab.hxx
-/Users/kab163/CIS561/HW2_redo/HW2/quack.tab.hxx
+/Users/kab163/CIS561/HW2_again/HW2/quack.tab.hxx
 lex.yy.h
-/Users/kab163/CIS561/HW2_redo/HW2/lex.yy.h
+/Users/kab163/CIS561/HW2_again/HW2/lex.yy.h
 libintl.h
 -
 Messages.h
-/Users/kab163/CIS561/HW2_redo/HW2/Messages.h
+/Users/kab163/CIS561/HW2_again/HW2/Messages.h
 
-/Users/kab163/CIS561/HW2_redo/HW2/quack.tab.hxx
+/Users/kab163/CIS561/HW2_again/HW2/quack.tab.hxx
 ASTNode.h
-/Users/kab163/CIS561/HW2_redo/HW2/ASTNode.h
+/Users/kab163/CIS561/HW2_again/HW2/ASTNode.h
 cstdlib
 -
 iostream
@@ -98,11 +94,11 @@ string
 vector
 -
 stack.hh
-/Users/kab163/CIS561/HW2_redo/HW2/stack.hh
+/Users/kab163/CIS561/HW2_again/HW2/stack.hh
 location.hh
-/Users/kab163/CIS561/HW2_redo/HW2/location.hh
+/Users/kab163/CIS561/HW2_again/HW2/location.hh
 
-/Users/kab163/CIS561/HW2_redo/HW2/stack.hh
+/Users/kab163/CIS561/HW2_again/HW2/stack.hh
 vector
 -
 

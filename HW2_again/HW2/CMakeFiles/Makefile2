@@ -59,10 +59,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kab163/CIS561/HW2_redo/HW2
+CMAKE_SOURCE_DIR = /Users/kab163/CIS561/HW2_again/HW2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kab163/CIS561/HW2_redo/HW2
+CMAKE_BINARY_DIR = /Users/kab163/CIS561/HW2_again/HW2
 
 #=============================================================================
 # Target rules for target CMakeFiles/lexer.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/kab163/CIS561/HW2_redo/HW2
 CMakeFiles/lexer.dir/all:
 	$(MAKE) -f CMakeFiles/lexer.dir/build.make CMakeFiles/lexer.dir/depend
 	$(MAKE) -f CMakeFiles/lexer.dir/build.make CMakeFiles/lexer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target lexer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target lexer"
 .PHONY : CMakeFiles/lexer.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/lexer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lexer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_again/HW2/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lexer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_again/HW2/CMakeFiles 0
 .PHONY : CMakeFiles/lexer.dir/rule
 
 # Convenience name for target.
@@ -108,7 +108,7 @@ clean: CMakeFiles/lexer.dir/clean
 CMakeFiles/parser.dir/all:
 	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/depend
 	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles --progress-num=8,9,10,11,12,13,14,15 "Built target parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kab163/CIS561/HW2_again/HW2/CMakeFiles --progress-num=8,9,10,11,12,13,14,15 "Built target parser"
 .PHONY : CMakeFiles/parser.dir/all
 
 # Include target in all.
@@ -118,9 +118,9 @@ all: CMakeFiles/parser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/parser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_again/HW2/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/parser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_redo/HW2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kab163/CIS561/HW2_again/HW2/CMakeFiles 0
 .PHONY : CMakeFiles/parser.dir/rule
 
 # Convenience name for target.

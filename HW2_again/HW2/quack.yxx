@@ -73,14 +73,6 @@ class: CLASS IDENT '(' stmts ')' '{' stmts '}' { }
      | CLASS IDENT '(' stmts ')' EXTENDS IDENT '{' stmts '}' { } 
      ;
 
-//args: %empty { }
-//    | args',' arg { }
-//    ;
-
-//arg: %empty { }
-//   | L_Expr ':' IDENT { } 
-//   ;
-
 stmts: %empty { }
      | stmts stmt { }
      ;
@@ -90,13 +82,12 @@ stmt: %empty { }
      | while_stmt { }
      | meth_stmt { }
      | RETURN ';' { }
-     | RETURN R_Expr { }
+     | RETURN R_Expr stmt { }
      | RETURN L_Expr ';' { }
      | typeC { }
      | L_Expr ':' IDENT ',' { }
      | L_Expr ':' IDENT { }     
      | L_Expr ':' IDENT '=' R_Expr stmt { } 
-//     | L_Expr '.' IDENT '=' R_Expr '(' R_Expr ')' ';' { }
      | L_Expr '=' R_Expr stmt { }
      | R_Expr { }
      ;
@@ -120,7 +111,7 @@ types: %empty { }
      | types type { }
      ;
 
-type: L_Expr ':' L_Expr stmts { }
+type: stmts { }
     ; 
 
 L_Expr : IDENT  { }
@@ -133,10 +124,10 @@ R_Expr : INT_LIT';' { }
        | STRING_LIT';' { }
        | STRING_LIT { }
        | L_Expr { }
-       | R_Expr '*' R_Expr { }
-       | R_Expr '+' R_Expr { }
-       | R_Expr '-' R_Expr { }
-       | R_Expr '/' R_Expr { }
+       | R_Expr '*' R_Expr  { }
+       | R_Expr '+' R_Expr  { }
+       | R_Expr '-' R_Expr  { }
+       | R_Expr '/' R_Expr  { }
        | R_Expr '>' R_Expr { }
        | R_Expr '<' R_Expr { }
        | R_Expr ATMOST R_Expr { }
@@ -146,6 +137,7 @@ R_Expr : INT_LIT';' { }
        | R_Expr OR R_Expr { }
        | R_Expr '.' IDENT '(' R_Expr ')' { }
        | R_Expr '.' IDENT '(' ')' ';' { }
+       | R_Expr '.' IDENT '(' ')' { }
        | R_Expr '.' IDENT '(' R_Expr ')' ';' { }
        | IDENT '(' R_Expr ')' { }
        | IDENT '(' R_Expr ')' ';' { }
@@ -155,6 +147,7 @@ R_Expr : INT_LIT';' { }
        | R_Expr 'n' ';' { }
        | '(' IDENT ')' { }
        | '(' R_Expr ')' ';' { }
+       | '(' R_Expr ')' { }
        | IDENT '(' ')' ';' { } 
        ;
 

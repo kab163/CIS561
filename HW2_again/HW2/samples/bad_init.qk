@@ -14,7 +14,7 @@ class BadInit() {
 	     x = y;     // Error here
 	   }
 	   rep = rep + 1;
-	   y = 42;
+	   //y = 42;
       }
    }
 }
