@@ -62,8 +62,8 @@ std::string BAD_NL_STR =
 ==    { return parser::token::EQUALS; }
 [<]=  { return parser::token::ATMOST; }
 [>]=  { return parser::token::ATLEAST;}
-[<]   { return parser::token::LESS;   }
-[>]   { return parser::token::MORE;   }
+
+
 
 
    /* Single character punctuation.  Because a character
@@ -74,19 +74,7 @@ std::string BAD_NL_STR =
     */
 
 [/][/].*[\n] { ; }
-[-]     { return parser::token::MINUS; }
-[+]     { return parser::token::PLUS;  }
-[*]     { return parser::token::TIMES; }
-[/]     { return parser::token::DIVIDE;}
-[(]          { ; }
-[)]          { ; }    
-[{]          { ; }
-[}]          { ; }
-[,]          { ; }
-[;]          { ; }
-[.]          { ; }
-[:]          { ; }
-[=]          { ; }
+[-+*/(){},;.:=<>]     { return text()[0]; }
 
   /* Keywords are essentially another kind of punctuation,
    * but since they also match the identifier pattern, we

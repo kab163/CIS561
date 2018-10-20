@@ -183,13 +183,7 @@ namespace yy {
         IDENT = 273,
         INT_LIT = 274,
         STRING_LIT = 275,
-        NEG = 276,
-        LESS = 277,
-        MORE = 278,
-        PLUS = 279,
-        MINUS = 280,
-        TIMES = 281,
-        DIVIDE = 282
+        NEG = 276
       };
     };
 

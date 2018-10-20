@@ -18,6 +18,9 @@ default: lexer
 lex.yy.cpp lex.yy.h:	quack.lxx  quack.tab.hxx
 	$(REFLEX) --bison-cc --bison-locations --header-file quack.lxx
 
+quack.tab.cxx quack.tab.hxx location.hh position.hh stack.hh: quack.yxx
+	bison -d quack.yxx
+
 lexer:  lex_driver.o  lex.yy.o ASTNode.o  Messages.o
 	$(CC) $(CCOPTS) -o lexer -l reflex $^
 
