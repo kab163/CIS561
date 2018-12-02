@@ -1,0 +1,6 @@
+def EQUAL(other: Obj): Boolean {
+    typecase other {
+       pt: Point { return this.x == pt.x and this.y == pt.y; }
+    }
+    return false;
+}

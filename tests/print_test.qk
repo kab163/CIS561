@@ -1,0 +1,12 @@
+class Printer() { 
+    def println(obj: Obj) {
+        obj.PRINT();
+        this.feed();
+    }
+    def feed() {
+        "\n".PRINT();
+    }
+}
+
+print = Printer();
+print.PRINT();

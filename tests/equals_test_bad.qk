@@ -1,0 +1,3 @@
+def EQUAL(other: Obj): Boolean {
+    return this.x == other.x and this.y == other.y;
+}
